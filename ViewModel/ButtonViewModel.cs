@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Assembly_Browser;
 using AssemblyAnalyzer;
-using Container = AssemblyAnalyzer.Container;
+using Container = Assembly-Analyzer.Container;
 
 namespace Assembly_Browser.ViewModel
 {

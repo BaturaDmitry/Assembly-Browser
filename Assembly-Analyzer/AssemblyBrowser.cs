@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using static System.Reflection.BindingFlags;
 using Assembly_Analyzer.Formatters;
-
 namespace AssemblyAnalyzer
 {
     public class AssemblyBrowser
