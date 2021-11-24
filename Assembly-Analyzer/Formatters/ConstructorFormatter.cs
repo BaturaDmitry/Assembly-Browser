@@ -49,9 +49,9 @@ namespace Assembly_Analyzer.Formatters
                 stringBuilder.Append(parameterType).Append(" ").Append(parameter.Name).Append(",");
             }
 
-            if (stringBuilder.Length > 1)
+         /*   if (stringBuilder.Length > 1)
                 stringBuilder.Remove(stringBuilder.Length - 1, 1);
-
+         */
             stringBuilder.Append(")");
 
             return stringBuilder.ToString();
@@ -61,7 +61,7 @@ namespace Assembly_Analyzer.Formatters
         private static string GetGenericType(Type parameter)
         {
 
-            var stringBuilder = new StringBuilder(Regex.Replace(parameter.Name, "`[0-9]+$", ""));
+            var stringBuilder = new StringBuilder(parameter.Name);
 
             stringBuilder.Append("<");
             if (parameter.IsGenericType)

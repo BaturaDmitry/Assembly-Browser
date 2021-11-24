@@ -18,12 +18,12 @@ namespace Assembly_Browser
         {
             _buttonViewModel = viewModel;
         }
-
+        //может ли выполняться
         public bool CanExecute(object parameter)
         {
             return true;
         }
-
+        //само выполнение команды
         public void Execute(object parameter)
         {
             _buttonViewModel.OnExecute();

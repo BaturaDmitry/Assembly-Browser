@@ -62,7 +62,7 @@ namespace Assembly_Analyzer.Formatters
         private static string GetGenericType(Type parameter)
         {
 
-            var stringBuilder = new StringBuilder(Regex.Replace(parameter.Name, "`[0-9]+$", ""));
+             var stringBuilder = new StringBuilder(Regex.Replace(parameter.Name, "`[0-9]+$", ""));
 
             stringBuilder.Append("<");
             if (parameter.IsGenericType)

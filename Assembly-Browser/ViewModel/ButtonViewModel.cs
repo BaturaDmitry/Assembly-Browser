@@ -25,7 +25,6 @@ namespace Assembly_Browser.ViewModel
             set
             {
                 _fileName = value;
-                OnPropertyChanged("FileName");
             }
         }
 
@@ -53,25 +52,22 @@ namespace Assembly_Browser.ViewModel
             {
                 Filter = "Assemblies|*.dll;*.exe",
                 Title = "Select assembly",
-                Multiselect = false
+            
             };
 
             var isOpen = fileDialog.ShowDialog();
 
             if (isOpen == null)
             {
-                //MessageBox.Show("ohhhh");
                 FileName = "File hasn't been chosen.";
                 return;
             }
 
             if (isOpen.Value)
-            {
-                //MessageBox.Show("opened");
+            {       
                 FileName = fileDialog.FileName;
                 CreateTree(FileName);
             }
-            //MessageBox.Show("Button is cliicked");
         }
 
         private List<Container> _namespaces;
@@ -98,15 +94,12 @@ namespace Assembly_Browser.ViewModel
                 OnPropertyChanged("Signature");
                 OnPropertyChanged("Members");
                 OnPropertyChanged(nameof(Namespaces));
-                MessageBox.Show("Managed");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
 
             }
-
-            //OnPropertyChanged("Signature");
         }
 
     }

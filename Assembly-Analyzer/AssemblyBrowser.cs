@@ -80,10 +80,9 @@ namespace AssemblyAnalyzer
         {
             var methodInfos = new List<MemberInfo>();
 
-            // add constructors
             methodInfos.AddRange(GetConstructors(type));
 
-            // add methods
+
             foreach (var method in type.GetMethods(Instance | Static | Public | NonPublic | DeclaredOnly))
             {
 
@@ -104,12 +103,12 @@ namespace AssemblyAnalyzer
 
         private static List<MemberInfo> GetFields(Type type)
         {
-            return type.GetFields().Select(field => new MemberInfo(FieldFormatter.Format(field), ClassFormatter.Format(type))).ToList(); //Instance | Static | Public | NonPublic
+            return type.GetFields().Select(field => new MemberInfo(FieldFormatter.Format(field), ClassFormatter.Format(type))).ToList();
         }
 
         private static IEnumerable<MemberInfo> GetProperties(Type type)
         {
             return type.GetProperties().Select(property => new MemberInfo(PropertiesFormatter.Format(property), ClassFormatter.Format(type))).ToList();
-        } //Instance | Static | Public | NonPublic
+        } 
     }
 }
