@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Assembly_Analyzer.Formatters
 {
     public static class FieldFormatter
-    {
+    { 
         public static string Format(FieldInfo fieldInfo)
         {
             return string.Join(" ",

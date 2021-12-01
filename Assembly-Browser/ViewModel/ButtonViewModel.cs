@@ -92,8 +92,8 @@ namespace Assembly_Browser.ViewModel
             {
                 Namespaces = assemblyBrowser.GetAssemblyInfo(FileName);
                 OnPropertyChanged("Signature");
-                OnPropertyChanged("Members");
-                OnPropertyChanged(nameof(Namespaces));
+           /*     OnPropertyChanged("Members");*/
+            /*    OnPropertyChanged(nameof(Namespaces));*/
             }
             catch (Exception e)
             {
